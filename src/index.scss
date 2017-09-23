@@ -1,0 +1,23 @@
+// @import url('https://fonts.googleapis.com/css?family=Adamina');
+@import url('https://fonts.googleapis.com/css?family=Adamina|Istok+Web');
+
+@import './variables.scss';
+
+html, body, #root, .main, .section {
+	width: 100%;
+	margin: 0;
+}
+html, body, #root, .main {
+	height: 100%;
+	padding: 0;
+}
+body {
+	font-family: 'Adamina', serif;
+	background-color: $white;
+
+
+	.section {
+		min-height: 100vh;
+		overflow: hidden;
+	}
+}
