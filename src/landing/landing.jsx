@@ -13,7 +13,7 @@ class Landing extends Component {
 		return <div className='landing section'>
 			<div className='titleContainer'>
 				{this.renderDiamonds(4)}
-				<div className='title'>studio ki</div>
+				<h1 className='title'>studio ki</h1>
 			</div>
 			
 		</div>;

@@ -1,7 +1,10 @@
-// @import url('https://fonts.googleapis.com/css?family=Adamina');
-@import url('https://fonts.googleapis.com/css?family=Adamina|Istok+Web');
+@import url('https://fonts.googleapis.com/css?family=Adamina|Open+Sans');
 
 @import './variables.scss';
+
+* {
+	box-sizing: border-box;
+}
 
 html, body, #root, .main, .section {
 	width: 100%;
@@ -12,10 +15,14 @@ html, body, #root, .main {
 	padding: 0;
 }
 body {
-	font-family: 'Adamina', serif;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.1em;
 	background-color: $white;
 
-
+	h1 {
+		font-family: 'Adamina', serif;
+		font-weight: normal;
+	}
 	.section {
 		min-height: 100vh;
 		overflow: hidden;
