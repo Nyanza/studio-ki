@@ -1,0 +1,37 @@
+{
+  "name": "studio-ki",
+  "version": "1.0.0",
+  "description": "studio-ki website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --inline",
+    "build": "webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nyanza/studio-ki.git"
+  },
+  "author": "misspia, msajaffe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nyanza/studio-ki/issues"
+  },
+  "homepage": "https://github.com/Nyanza/studio-ki#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "jshint": "^2.9.5",
+    "jshint-loader": "^0.8.4",
+    "node-sass": "^4.5.3",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2"
+  },
+  "dependencies": {}
+}
