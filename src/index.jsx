@@ -11,11 +11,7 @@ import './index.scss';
 class App extends Component {
 	render() {
 		return <div className="main">
-			supp
 			<Landing />
-			<Services />
-			<Portfolio />
-			<Contact />
 		</div>;
 	}
 }
