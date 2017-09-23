@@ -1,0 +1,88 @@
+@import '../variables.scss';
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	
+	min-height: 50px;
+	height: 7vh;
+	width: 100%;
+	padding: 0 1vw;
+
+	letter-spacing: 0.2vw;
+	font-weight: bold;
+
+	.title {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		color: darken($pink, 5%);
+		text-transform: uppercase;
+		&:before {
+			content:'';
+			position: absolute;
+			left: 0;
+			z-index: -1;
+			height: 0;
+			width: 0;
+			background-color: transparent;
+			border-top: 2em solid $blue;
+			border-right: 6.5em solid transparent;
+		}
+	}
+	.links {
+		display: grid;
+		grid-auto-flow: column;
+		grid-gap: 3vw;
+		height: 60%;
+		.link {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			position: relative;
+
+			padding: 0 3vw;
+			color: $gold;
+			
+			text-transform: uppercase;
+			
+			transition: 0.4s all;
+			
+			&:not(:last-child) {
+				&:before, &:after {
+					content: '';
+					transition: inherit;
+					position: absolute;
+					height: 0.1em;
+					width: 0%;
+					background-color: $gold;
+				}
+				&:before {
+					left: 0;
+					bottom: 0;
+				}
+				&:after {
+					right: 0;
+					top: 0;
+				}
+				&:hover {
+					&:before, &:after {
+						width: 100%;
+					}
+				}
+			}
+			&:last-child {
+				border-radius: 0.2em;
+				box-shadow: 0.2em 0.2em 0.5em 0 $shadowDark;
+				&:hover {
+					background-color: $goldBright;
+					color: $blue;
+				}
+			}
+		}
+	}
+}
