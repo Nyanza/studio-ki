@@ -8,3 +8,9 @@ $black: #212121;
 
 $shadow: rgba(120, 132, 132, 0.41);
 $shadowDark:  rgba($black, 0.4);
+
+@mixin mobile {
+	@media screen and (max-width: 800px) {
+		@content;
+	}
+}

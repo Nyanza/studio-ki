@@ -24,6 +24,8 @@ body {
 		font-weight: normal;
 		font-size: 3em;
 		text-transform: uppercase;
+
+		@include mobile { font-size: 2.5em; }
 	}
 	a {
 		text-decoration: none;

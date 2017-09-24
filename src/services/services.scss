@@ -11,6 +11,10 @@ $serviceMinHeight: 40vh;
 		grid-template-columns: repeat(3, 1fr);
 		grid-gap: 7vw;
 
+		@include mobile {
+			grid-template-columns: 1fr;
+		}
+		
 		.service {
 			display: flex;
 			flex-direction: column;
