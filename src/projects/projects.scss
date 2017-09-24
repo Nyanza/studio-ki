@@ -1,0 +1,94 @@
+@import '../variables.scss';
+
+$horizontalOffset: 20%;
+$containerPadding: 2em;
+
+$hoverRotate: -10deg;
+
+.projects * {
+	transition: 250ms all;
+}
+.projects {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	.content {
+		display: grid;
+		grid-auto-flow: row;
+		grid-gap: 5vh;
+		width: 100%;
+		.project {
+			// border: solid red 1px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 80vh;
+			position: relative;
+			.container {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: flex-start;
+				position: relative;
+				padding: $containerPadding;
+				
+
+				width: 500px;
+				height: 60%;
+				border-radius: 0.2em;
+
+				background-color: $pinkBright;
+				color: $black;
+				box-shadow: 0 0 0 0 transparent;
+				
+				.category, .title {
+					font-weight: bolder;
+				}
+				.category {
+					position: absolute;
+					transform: rotate(-90deg);
+					top: $containerPadding;
+					left: $containerPadding;
+				}
+				.title {
+					font-size: 4em;
+				}
+				.description {
+					position: relative;
+					&:before {
+						content: '';
+						position: absolute;
+						bottom: -20px;
+						height: 10px;
+						background-color: $black;
+						width: 30%;
+						transition: inherit;
+					}
+				}
+				&:hover {
+					box-shadow: 0em 0.2em 1em 0 $shadowDark;
+					transform: rotate($hoverRotate) translatex(-2vw);
+					.category {
+						transform: translate(2vw, 2vh) rotate(-$hoverRotate);
+					}
+					.containerInner {
+						transform: rotate(-$hoverRotate);
+					}
+					
+					.title {
+						transform: translatex(10vw);
+					}
+					.description {
+						transform: translate(15vw);
+						&:before {
+							transform-origin: center center;
+							transform: translatex(-15vw) rotate(40deg);
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -23,8 +23,12 @@ body {
 		font-family: 'Adamina', serif;
 		font-weight: normal;
 	}
+	a {
+		text-decoration: none;
+	}
 	.section {
 		min-height: 100vh;
+		padding: 2vw;
 		overflow: hidden;
 	}
 }
