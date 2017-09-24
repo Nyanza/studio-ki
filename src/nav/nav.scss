@@ -20,13 +20,14 @@
 		font-size: 1em;
 	}	
 
-	.title {
+	.home {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		position: relative;
 		color: darken($pink, 5%);
 		text-transform: uppercase;
+		cursor: pointer;
 
 		@include mobile { display: none; }
 

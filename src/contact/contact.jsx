@@ -48,7 +48,6 @@ class Contact extends Component {
 		//send data stored in state
 	}
 	render() {
-		console.log(this.state.sender, this.state.message)
 		return <div className='contact section'>
 			<h1>{Metadata.title}</h1>
 			<div className='description'>{Metadata.description}</div>
