@@ -14,9 +14,12 @@
 		align-items: center;
 		width: 50vw;
 		height: 60vh;
+
+		@include mobile { width: 100%; }
 		&>*{
 			width: 100%;
 			margin-top: 1vh;
+			@include mobile { margin-top: 1vh; }
 		}
 		.senderField, .messageField, .submit {
 			padding: 2vh;
@@ -44,6 +47,9 @@
 			text-align: center;
 			cursor: pointer;
 			transition: 0.3s all;
+
+			@include mobile { width: 40%; }
+
 			&:hover {
 				background-color: $pinkBright;
 				border-color: $pinkBright;

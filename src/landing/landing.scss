@@ -10,6 +10,7 @@ $diamondSize: $titleSize * 5;
 	display: flex; 
 	justify-content: center;
 	align-items: center;	
+	@include mobile { font-size: 0.5em; }
 	
 	.titleContainer {
 		position: relative;
