@@ -16,12 +16,14 @@ html, body, #root, .main {
 }
 body {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 1.1em;
+	font-size: 1.05em;
 	background-color: $white;
 
 	h1 {
 		font-family: 'Adamina', serif;
 		font-weight: normal;
+		font-size: 3em;
+		text-transform: uppercase;
 	}
 	a {
 		text-decoration: none;
