@@ -16,6 +16,7 @@
 	font-weight: bold;
 	
 	@include mobile {
+		justify-content: center;
 		letter-spacing: 0vw;
 		font-size: 1em;
 	}	

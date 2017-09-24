@@ -21,6 +21,7 @@ $serviceMinHeight: 40vh;
 			align-items: center;
 			justify-content: center;
 			position: relative;
+			z-index: -1;
 
 			min-height: $serviceMinHeight;
 			padding: 1.5em;
