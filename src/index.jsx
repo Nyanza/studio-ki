@@ -1,22 +1,32 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
+import { Element } from 'react-scroll';
 import Nav from './nav/nav.jsx';
-import Landing from './landing/landing.jsx';
-import Services from './services/services.jsx';
-import Projects from './projects/projects.jsx';
-import Contact from './contact/contact.jsx';
 
+import Metadata from './nav/metadata.js';
 import './index.scss';
 
 class App extends Component {
+	renderHome() {
+		return this.renderSection(Metadata.home, 0);
+	}
+	renderSections() {
+		return Metadata.links.map((link, index) => {
+			return this.renderSection(link, index);
+		})
+	};
+	renderSection(link, index) {
+		return <Element key={index} id={link.to}>
+			{link.component}
+		</Element>
+	}
 	render() {
-		return <div className="main">
+		return <div className='main'>
 			<Nav />
-			<Landing />
-			<Services />
-			<Projects />
-		</div>;
+			{this.renderHome()}
+			{this.renderSections()}
+		</div>
 	}
 }
 

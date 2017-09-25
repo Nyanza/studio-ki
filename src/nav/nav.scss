@@ -14,14 +14,24 @@
 
 	letter-spacing: 0.2vw;
 	font-weight: bold;
+	
+	@include mobile {
+		justify-content: center;
+		letter-spacing: 0vw;
+		font-size: 1em;
+	}	
 
-	.title {
+	.home {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		position: relative;
 		color: darken($pink, 5%);
 		text-transform: uppercase;
+		cursor: pointer;
+
+		@include mobile { display: none; }
+
 		&:before {
 			content:'';
 			position: absolute;
@@ -39,6 +49,8 @@
 		grid-auto-flow: column;
 		grid-gap: 3vw;
 		height: 60%;
+
+		@include mobile { height: 80%; }
 		.link {
 			display: flex;
 			justify-content: center;
@@ -81,7 +93,7 @@
 				box-shadow: 0.2em 0.2em 0.5em 0 $shadowDark;
 				&:hover {
 					background-color: $goldBright;
-					color: $blue;
+					color: $white;
 				}
 			}
 		}

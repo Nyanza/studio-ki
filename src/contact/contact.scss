@@ -1,3 +1,61 @@
+@import '../variables.scss';
+
 .contact {
-	
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	background-color: $blue;
+	color: $gold;
+	.content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 50vw;
+		height: 60vh;
+
+		@include mobile { width: 100%; }
+		&>*{
+			width: 100%;
+			margin-top: 1vh;
+			@include mobile { margin-top: 1vh; }
+		}
+		.senderField, .messageField, .submit {
+			padding: 2vh;
+			font-size: 1.1em;
+			border: solid 2px $gold;
+			color: $gold;
+		}
+		.senderField, .messageField {
+			background-color: transparent;
+			&:focus {
+				outline: none;
+			}
+		}
+		.senderField {
+			
+
+		}
+		.messageField {
+			height: 60%;
+			resize: none;
+		}
+		.submit {
+			align-self: flex-end;
+			width: 20%;
+			text-align: center;
+			cursor: pointer;
+			transition: 0.3s all;
+
+			@include mobile { width: 40%; }
+
+			&:hover {
+				background-color: $pinkBright;
+				border-color: $pinkBright;
+				color: $white;
+				box-shadow: 0.1em 0.2em 0.5em 0 $shadowDark;
+			}
+		}
+	}	
 }
