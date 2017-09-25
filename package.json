@@ -34,5 +34,8 @@
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.8.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "mocha": "^3.5.3",
+    "winston": "^2.3.1"
+  }
 }
