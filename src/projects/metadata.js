@@ -2,34 +2,25 @@ const Metadata = {
 	title: 'work',
 	projects: [
 		{
-			title: 'A Project',
+			title: 'Australian Doctors\' Clinic',
 			category: 'web',
 			demoSrc: '',
 			imgSrc: '',
-			description: `
-				Oh my God. I didn't even know Smarties made a cereal.
-				They don't. It's just Smarties in a bowl with milk.
-			`
+			description: 'A comprehensive website created for a medical center in Kenmore, Queensland. Beautifully designed with integration into medical booking software.'
 		},
 		{
-			title: 'A Project',
+			title: 'Cash4Car Services Brisbane',
 			category: 'web',
 			demoSrc: '',
 			imgSrc: '',
-			description: `
-				Oh my God. I didn't even know Smarties made a cereal.
-				They don't. It's just Smarties in a bowl with milk.
-			`
+			description: 'Website developed for a client within the auto recycling industry in Brisbane, Australia. Boosted sales by over 20 verified calls per day. Conversion monitoring done via twilio & adwords.'
 		},
 		{
-			title: 'A Project',
+			title: 'Everyday Flooring',
 			category: 'web',
 			demoSrc: '',
 			imgSrc: '',
-			description: `
-				Oh my God. I didn't even know Smarties made a cereal.
-				They don't. It's just Smarties in a bowl with milk.
-			`
+			description: 'Tiling and flooring website created for a local family owned business in Brisbane Australia. Cooperated with the clients every step of the way to ensure their ideal website was acheived.'
 		},
 	]
 };
