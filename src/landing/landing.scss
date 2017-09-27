@@ -2,61 +2,52 @@
 $titleSize: 6em;
 $diamondSize: $titleSize * 5;
 .landing {
-	background-image: url('./texture2.png');
-	background-repeat: repeat;
-	background-color: $blue;
-	color: $gold;
+	background-color: $white;
+	color: $black;
 
 	display: flex; 
 	justify-content: center;
 	align-items: center;	
 	@include mobile { font-size: 0.5em; }
 	
-	.titleContainer {
+	.about{
 		position: relative;
-		display: flex; 
-		align-items: center;
-		justify-content: center;
-		.diamond {
-			position:absolute;
-			width: $diamondSize;
-			height: $diamondSize;
-			transform: rotate(45deg);
-			border: solid 1px rgba($gold, 0.5);
+		display: grid;
+		grid-auto-flow: row; 
+		grid-template-rows: 1.5fr 1fr 1fr;
+		.title, .tagline {
+			margin: 0.1em 0;
+		}
+		.title, .button {
+			text-transform: uppercase;
+			letter-spacing: $letterSpaceDesktop;
+		}
+		.title {
+			z-index: 1;
+			font-size: 4em;
+			transition: 0.4s all;
+		}
+		.tagline {
+			font-size: 1.5em;
+			color: $gray;
+		}
+		.button {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 6vw;
+			width: 18vw;
 			
-			&:first-child {
-				border: solid 5px $gold;
-				display: flex;
-				align-items: center;
-			}
-			&:nth-child(2) {
-				width: $diamondSize * 1.15;
-				height: $diamondSize * 1.15;
-			}
-			&:nth-child(3) {
-				width: $diamondSize * 0.6;
-				height: $diamondSize * 0.6;
-			}
-			&:nth-child(4) {
-				width: $diamondSize * 0.4;
-				height: $diamondSize * 0.4;
+			background-color: $black;
+			color: $white;
+			letter-spacing: $letterSpaceDesktop;
+
+			cursor: pointer;
+			&:hover {
+				background-color: lighten($black, 10%);
 			}
 		}
 
 	}
-	.title {
-		z-index: 1;
-		font-size: $titleSize;
-		text-transform: uppercase;
 		
-		-webkit-text-fill-color: transparent; 
-		background: linear-gradient(to left, lighten($gold, 20%) 10%, $gold 20%, lighten($gold, 20%) 70%,  lighten($gold, 40%) 100%);
-		background-size: 200% auto;
-		-webkit-background-clip: text;
-		transition: 0.4s all;
-		&:hover {
-			background-position: 200% 40%;
-			text-shadow: 0 0 1em rgba($gold, 0.6);
-		}
-	}
 }
