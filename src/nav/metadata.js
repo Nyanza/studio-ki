@@ -7,7 +7,7 @@ import Contact from '../contact/contact.jsx';
 
 const Metadata = {
 	home: {
-		title: 'studio ki',
+		title: 'ki.',
 		to: 'landing',
 		component: <Landing />
 	},
