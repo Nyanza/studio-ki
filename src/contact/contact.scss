@@ -5,8 +5,8 @@
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-	background-color: $blue;
-	color: $gold;
+	background-color: $white;
+	color: $black;
 	.content {
 		display: flex;
 		flex-direction: column;
@@ -24,8 +24,8 @@
 		.senderField, .messageField, .submit {
 			padding: 2vh;
 			font-size: 1.1em;
-			border: solid 2px $gold;
-			color: $gold;
+			border: solid 2px $black;
+			color: $black;
 		}
 		.senderField, .messageField {
 			background-color: transparent;

@@ -21,10 +21,11 @@ body {
 	color: $black;
 
 	h1 {
-		font-family: 'Adamina', serif;
+		// font-family: 'Adamina', serif;
 		font-weight: normal;
 		font-size: 3em;
 		text-transform: uppercase;
+		letter-spacing: $letterSpaceDesktop;
 
 		@include mobile { font-size: 2.5em; }
 	}
