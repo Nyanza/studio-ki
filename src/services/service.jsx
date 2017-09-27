@@ -32,7 +32,7 @@ class Services extends Component {
 	}
 	renderImageCell() {
 		return <div className='image'>
-				<img src='' alt={this.props.title}/>
+				<img src={this.props.img} alt={this.props.title}/>
 			</div>;
 	}
 	renderAboutCell() {
