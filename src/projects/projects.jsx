@@ -17,7 +17,6 @@ class Projects extends Component {
 		return <Project key={index}
 			index={index}
 			title={project.title}
-			category={project.category}
 			demoSrc={project.demoSrc}
 			imgSrc={project.imgSrc}
 			description={project.description} />

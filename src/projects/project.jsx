@@ -1,43 +1,20 @@
 import React, { Component } from 'react';
 
 class Project extends Component {
-	containerStyles() {
-		return {
-			// backgroundImage: `url(${this.props.imgSrc})`,
-			// [this.offset()]: 'auto'
-		}
-	}
-	isEven() {
-		return this.props.index % 2 == 0;
-	}
-	offset() {
-		return this.isEven() ? 'marginRight' : 'marginLeft'; 
-	}
 	render() {
-		return <div className='project'>
-			<a className='container' href={this.props.demoSrc}  style={this.containerStyles()}>
-				<div className='category'>
-					{this.props.category}
-				</div>
-				<div className='containerInner'>
-					
-					<div className='title'>
-						{this.props.title}
-					</div>
-					
-					<div className='description'>
-						{this.props.description}
-					</div>
-				</div>
-			</a>
-		</div>;
+		return <a className='project' href={this.props.demoSrc} >
+			<img className='image' src={this.props.imgSrc} /> 
+			<div className='about'>
+				<h3 className='title'>{this.props.title}</h3>
+				<div className='description'>{this.props.description}</div>
+			</div>
+		</a>;
 	}
 }
 
 Project.defaultProps = {
 	index: 0,
 	title: '',
-	category: '',
 	demoSrc: '',
 	imgSrc: '',
 	description: ''
