@@ -1,5 +1,4 @@
 @import '../variables.scss';
-$serviceMinHeight: 40vh;
 
 .services {
 	display: flex;
@@ -8,52 +7,61 @@ $serviceMinHeight: 40vh;
 	align-items: center;
 	.content{
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-gap: 7vw;
-
-		@include mobile {
-			grid-template-columns: 1fr;
-		}
-		
+		grid-template-rows: 1fr;
+		// grid-gap: 7vw;
+	
 		.service {
-			display: flex;
-			flex-direction: column;
+			align-self: center;
+			display: grid;
 			align-items: center;
-			justify-content: center;
-			position: relative;
-			z-index: -1;
-
-			min-height: $serviceMinHeight;
-			padding: 1.5em;
-			border-radius: 0.2em;
-			
-			border: solid $goldBright 0.1em;
-			color: $goldBright;
-			letter-spacing: 1px;
-			line-height: 2;
-			&>* {
+			grid-gap: 5vw;
+			height: 80vh;
+			width: 100vw;
+			padding: 0 7vh;
+			.about, .image {
+				// border: solid red 1px;
+				width: 100%;
+				height: 30em;
+			}
+			.image {
 				display: flex;
 				justify-content: center;
-				
+				align-items: center;
+				img {
+					box-shadow: 0.1em 0.2em 0.5em 0 $shadowDark;
+				}
+			}
+			.about {
+				display: grid;
+				grid-template-rows: 1.5fr 2fr 1fr;
+				.title, .button {
+					text-transform: uppercase;
+					letter-spacing: $letterSpaceDesktop;
+					font-weight: bold;
 
-			}
-			.icon {
-				align-items: center;
-				position: absolute;
-				top: -5vh;
-				height: 10vh;
-				width: 10vw;
-				
-				background-color: $white;
-			}
-			.description {
-				z-index: 1;
-				padding: 0 0.6em;
-				min-height: $serviceMinHeight * 0.8;
-				align-items: center;
-				text-align: center;
-				background-color: $blue;
-				box-shadow: 0.1em 0.3em 0.5em 0.2em $shadow;
+				}
+				.title {
+					align-self: end;
+				}
+				.description {
+					align-self: center;
+					color: $gray;
+					line-height: 2;
+				}
+				.button {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					border: solid 2px $black;
+					width: 15em;
+					height: 5em;
+					transition: 0.3s all;
+					cursor: pointer;
+					&:hover {
+						background-color: $black;
+						color: $white;
+					}
+				}
 			}
 		}
 	}

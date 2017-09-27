@@ -16,7 +16,9 @@ class Services extends Component {
 	renderService(service, index) {
 		return <Service
 			key={index} 
-			icon={service.icon}
+			index={index}
+			img={service.img}
+			title={service.title}
 			description={service.description} />
 	}
 	render() {

@@ -4,11 +4,14 @@ $goldBright: #d5ae5e;
 $pink: #f3c9dd;
 $pinkBright: #F24369;
 $white: #fff;
-$black: #212121;
+$black: #222222;
+$gray: #a7a7a7;
 
 $shadow: rgba(120, 132, 132, 0.41);
 $shadowDark:  rgba($black, 0.4);
 
+$letterSpaceDesktop: 0.2em;
+$letterSpaceMobile: 0.1em;
 @mixin mobile {
 	@media screen and (max-width: 800px) {
 		@content;
