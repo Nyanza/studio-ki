@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import SayHi from './sayHi.js';
 import Metadata from './metadata.js';
 import './contact.scss';
 
@@ -35,9 +36,14 @@ class Contact extends Component {
 			onChange={(e) => this.handleChange(e, 'message')}/>;
 	}
 	renderSubmitButton() {
-		return <div className='submit' onClick={this.handleSubmit}>
+		return <button 
+			className={`submit ${this.isDisabled() ? 'disabled' : 'enabled'}`} 
+			onClick={this.handleSubmit}>
 				{Metadata.submit}
-			</div>
+			</button>
+	}
+	isDisabled() {
+		return !(this.state.sender.length > 0 && this.state.message.length > 0);
 	}
 	handleChange(e, path) {
 		this.setState({
@@ -45,7 +51,17 @@ class Contact extends Component {
 		});
 	}
 	handleSubmit() {
-		//send data stored in state
+		SayHi(this.state.sender, this.state.message);
+			// .then((res) => {
+			// 	console.log('tell user message was sent');
+			// 	this.setState = {
+			// 		sender: '',
+			// 		message: ''
+			// 	}
+			// })
+			// .error((err) => {
+			// 	console.log('tell user message could not be sent')
+			// })
 	}
 	render() {
 		return <div className='contact section'>

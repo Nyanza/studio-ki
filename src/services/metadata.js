@@ -17,7 +17,7 @@ const Metadata = {
 			title: 'App & Mobile Applications',
 			description: `
 				Get a professionally designed app with
-				an elegant design that follows the stanrds of user
+				an elegant design that follows the strands of user
 				experience design.
 			`
 		},

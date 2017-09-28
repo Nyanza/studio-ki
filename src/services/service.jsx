@@ -1,4 +1,7 @@
  import React, { Component } from 'react';
+ import { Link } from 'react-scroll';
+
+import  NavMetadata from '../nav/metadata.js';
 
 class Services extends Component {
 	constructor() {
@@ -39,8 +42,19 @@ class Services extends Component {
 		return <div className='about'>
 				<h2 className='title'>{this.props.title}</h2>
 				<div className='description'>{this.props.description}</div>
-				<div className='button'>get started</div>
+				{this.renderButton()}
 			</div>;
+	}
+	renderButton() {
+		const links = NavMetadata.links;
+		const contactLink = links[links.length - 1].to;
+		return <Link 
+			className='button'
+			to={contactLink}
+			spy={true}
+			smooth={true}
+			offset={0}
+			duration={500} >get started</Link>
 	}
 	handleClick() {
 		console.log("service clicked");

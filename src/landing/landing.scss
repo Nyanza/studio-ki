@@ -14,7 +14,7 @@ $diamondSize: $titleSize * 5;
 		position: relative;
 		display: grid;
 		grid-auto-flow: row; 
-		grid-template-rows: 1.5fr 1fr 1fr;
+		grid-template-rows: 1fr 1.5fr 1fr;
 		.title, .tagline {
 			margin: 0.1em 0;
 		}
