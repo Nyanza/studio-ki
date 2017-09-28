@@ -9,7 +9,7 @@
 		display: grid;
 		grid-template-rows: 1fr;
 		// grid-gap: 7vw;
-	
+
 		.service {
 			align-self: center;
 			display: grid;
@@ -28,6 +28,7 @@
 				justify-content: center;
 				align-items: center;
 				img {
+					height: 100%;
 					box-shadow: 0.1em 0.2em 0.5em 0 $shadowDark;
 				}
 			}

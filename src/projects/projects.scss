@@ -13,7 +13,7 @@ $hoverRotate: -10deg;
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-	
+
 	.content {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -29,14 +29,14 @@ $hoverRotate: -10deg;
 			cursor: pointer;
 			overflow:hidden;
 			.image {
-				background: url('./images/test.jpeg');
+				/*background: url('./images/test.jpeg');*/
 				z-index: -1;
 				position: absolute;
 				width: 100%;
 				height: auto;
 				width: 100%;
 				height: 100%;
-				
+
 			}
 			.about {
 				opacity: 0;
