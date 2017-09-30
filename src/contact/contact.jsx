@@ -55,14 +55,15 @@ class Contact extends Component {
 		this.setState({ sendState: 'sending...'})
 		SayHi(this.state.sender, this.state.message)
 			 .then((res) => {
-			 	this.setState({
-			 		sender: '',
-			 		message: '',
-			 		sendState: 'sent!'
-			 	})
-			 })
-			 .error((err) => {
-			 	this.setState({ sendState: 'try again :S'})
+				 if (res.status == 200) {
+				 		this.setState({
+				 			sender: '',
+				 			message: '',
+				 			sendState: 'sent!'
+				 		})
+					} else {
+						this.setState({ sendState: 'try again :S'})
+					}
 			 })
 	}
 	render() {

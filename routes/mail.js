@@ -13,10 +13,8 @@ const transporter = nodemailer.createTransport({
 });
 
 router.post('/', (req, res) => {
-
-  console.log(req.body)
   var mailOptions = {
-    from: 'sibtain462@gmail.com', // sender address
+    from: local.email, // sender address
     to: req.body.to, // list of receivers
     subject: req.body.subject, // Subject line
     html: '<b>Email:</b> ' + req.body.email + `
@@ -25,12 +23,11 @@ router.post('/', (req, res) => {
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-        console.log(error);
-        res.status(400).json({res: error});
+        res.status(400).json({res: resp, status: 400});
     } else {
-        console.log('Message sent: ' + info.response);
-        res.status(200).json({res: info.response});
-    };
+        console.log('Message sent: ' + JSON.stringify(info));
+        res.status(200).json({res: info.response, status: 200});
+    }
   });
 
 });
