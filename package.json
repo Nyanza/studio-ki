@@ -4,8 +4,10 @@
   "description": "studio-ki website",
   "main": "index.js",
   "scripts": {
+    "server": "nodemon index.js",
     "dev": "webpack-dev-server --inline",
-    "build": "webpack -p"
+    "start": "npm run dev | npm run server",
+    "build": "webpack -p --config=webpack.prod.js"
   },
   "repository": {
     "type": "git",
@@ -36,7 +38,11 @@
     "webpack-dev-server": "^2.8.2"
   },
   "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.1",
     "mocha": "^3.5.3",
+    "morgan": "^1.9.0",
+    "nodemailer": "^4.1.1",
     "winston": "^2.3.1"
   }
 }

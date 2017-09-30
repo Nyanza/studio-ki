@@ -16,21 +16,39 @@ html, body, #root, .main {
 }
 body {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 1.05em;
+	font-size: 1.2vw;
 	background-color: $white;
 	color: $black;
+	@include mobile {
+		font-size: 4vw;
+	}
 
 	h1 {
-		// font-family: 'Adamina', serif;
 		font-weight: normal;
 		font-size: 3em;
 		text-transform: uppercase;
 		letter-spacing: $letterSpaceDesktop;
 
-		@include mobile { font-size: 2.5em; }
+		@include mobile { font-size: 2em; }
 	}
 	a {
 		text-decoration: none;
+	}
+	.button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 14.5vw;
+		height: 4.5vw;
+		text-align: center;
+		cursor: pointer;
+		transition: 0.3s all;
+
+		@include mobile {
+			height: 20vw;
+			width: 50vw;
+		}
+
 	}
 	.section {
 		min-height: 100vh;

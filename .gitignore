@@ -3,3 +3,7 @@ node_modules/
 
 # Mac files
 .DS_Store
+
+#local configuration
+local.json
+config/local.json

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import SayHi from './sayHi.js';
 import Metadata from './metadata.js';
 import './contact.scss';
 
@@ -8,7 +9,8 @@ class Contact extends Component {
 		super();
 		this.state = {
 			sender: '',
-			message: ''
+			message: '',
+			sendState: 'send'
 		};
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
@@ -20,7 +22,7 @@ class Contact extends Component {
 		</div>
 	}
 	renderSenderField() {
-		return <input 
+		return <input
 			type="text"
 			className='senderField'
 			placeholder={Metadata.senderField}
@@ -35,9 +37,14 @@ class Contact extends Component {
 			onChange={(e) => this.handleChange(e, 'message')}/>;
 	}
 	renderSubmitButton() {
-		return <div className='submit' onClick={this.handleSubmit}>
-				{Metadata.submit}
-			</div>
+		return <button
+			className={`submit ${this.isDisabled() ? 'disabled' : 'enabled'}`}
+			onClick={this.handleSubmit}>
+				{this.state.sendState}
+			</button>
+	}
+	isDisabled() {
+		return !(this.state.sender.length > 0 && this.state.message.length > 0);
 	}
 	handleChange(e, path) {
 		this.setState({
@@ -45,7 +52,16 @@ class Contact extends Component {
 		});
 	}
 	handleSubmit() {
-		//send data stored in state
+		this.setState({ sendState: 'sending...'})
+		SayHi(this.state.sender, this.state.message)
+			 .then((res) => {
+			 	if(res.status !== 200) return this.setState({ sendState: 'try again :S'});
+			 	this.setState({
+		 			sender: '',
+		 			message: '',
+		 			sendState: 'sent!'
+		 		});
+			 })
 	}
 	render() {
 		return <div className='contact section'>
@@ -57,4 +73,3 @@ class Contact extends Component {
 }
 
 export default Contact;
-

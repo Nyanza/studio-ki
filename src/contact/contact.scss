@@ -45,16 +45,30 @@
 			align-self: flex-end;
 			width: 20%;
 			text-align: center;
+			background-color: transparent;
 			cursor: pointer;
 			transition: 0.3s all;
 
 			@include mobile { width: 40%; }
 
-			&:hover {
-				background-color: $pinkBright;
-				border-color: $pinkBright;
-				color: $white;
-				box-shadow: 0.1em 0.2em 0.5em 0 $shadowDark;
+			
+			&:focus, &:active {
+				outline: none;
+			}
+			&.disabled {
+				cursor: not-allowed;
+				pointer-events: all;
+				&:hover {
+
+				}
+			}
+			&.enabled {
+				&:hover {
+					background-color: $pinkBright;
+					border-color: $pinkBright;
+					color: $white;
+					box-shadow: 0.1em 0.2em 0.5em 0 $shadowDark;
+				}
 			}
 		}
 	}	

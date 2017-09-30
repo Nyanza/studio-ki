@@ -1,8 +1,8 @@
 const Metadata = {
 	title: 'contact',
-	description: 'drop us a message',
-	senderField: 'name',
-	messageField: 'stuff you wanna say',
+	description: '',
+	senderField: 'email',
+	messageField: 'help us get to know you :)',
 	submit: 'send'
 };
 

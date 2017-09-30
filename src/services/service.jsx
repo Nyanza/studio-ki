@@ -1,9 +1,18 @@
  import React, { Component } from 'react';
+ import { Link } from 'react-scroll';
+
+import  NavMetadata from '../nav/metadata.js';
 
 class Services extends Component {
 	constructor() {
 		super();
 		this.handleClick = this.handleClick.bind(this);
+	}
+	boxShadow() {
+		const shadow = '0.1em 0.2em 0.5em 0 rgba(34, 34, 34, 0.4)';
+		return {
+			boxShadow: this.props.shadow ? shadow : ''
+		}	
 	}
 	renderTemplate() {
 		if(this.props.index % 2 == 0) return this.renderEvenTemplate();
@@ -32,15 +41,26 @@ class Services extends Component {
 	}
 	renderImageCell() {
 		return <div className='image'>
-				<img src={this.props.img} alt={this.props.title}/>
+				<img src={this.props.img} alt={this.props.title} style={this.boxShadow()}/>
 			</div>;
 	}
 	renderAboutCell() {
 		return <div className='about'>
 				<h2 className='title'>{this.props.title}</h2>
 				<div className='description'>{this.props.description}</div>
-				<div className='button'>get started</div>
+				{this.renderButton()}
 			</div>;
+	}
+	renderButton() {
+		const links = NavMetadata.links;
+		const contactLink = links[links.length - 1].to;
+		return <Link 
+			className='button'
+			to={contactLink}
+			spy={true}
+			smooth={true}
+			offset={0}
+			duration={500} >get started</Link>
 	}
 	handleClick() {
 		console.log("service clicked");
