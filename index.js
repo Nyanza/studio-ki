@@ -19,8 +19,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 const MailRouter = require('./routes/mail.js');
 app.use('/api/v1/mail', MailRouter);
 
-app.use('/dist', express.static(path.join(__dirname, '/../dist')));
-app.get('*', (req, res) => res.sendFile(path.join(__dirname + '/../index.html')) );
+app.use('/dist', express.static(path.join(__dirname, '/dist')));
+app.get('*', (req, res) => res.sendFile(path.join(__dirname + '/index.html')) );
 
 app.listen(port, () => {
 	console.log('Listening on port ', port);
