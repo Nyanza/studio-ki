@@ -1,6 +1,6 @@
-import adc from './images/adc.png'
-import c4c from './images/c4c.png'
-import ed from './images/ed.png'
+import doctorImage from './images/adc.png'
+import carsImage from './images/c4c.png'
+import flooringImage from './images/ed.png'
 
 const Metadata = {
 	title: 'work',
@@ -8,7 +8,7 @@ const Metadata = {
 		{
 			title: 'Australian Doctors\' Clinic',
 			demoSrc: 'http://australiandoctorsclinic.com.au',
-			imgSrc: adc,
+			imgSrc: doctorImage,
 			description: `
 				A comprehensive website created for a medical center in Kenmore, Queensland.
 				Beautifully designed with integration into medical booking software.`
@@ -16,7 +16,7 @@ const Metadata = {
 		{
 			title: 'Cash4Car Services Brisbane',
 			demoSrc: 'http://cars-online.net.au',
-			imgSrc: c4c,
+			imgSrc: carsImage,
 			description: `
 				Website developed for a client within the auto recycling industry in Brisbane,
 				Australia. Boosted sales by over 20 verified calls per day.
@@ -25,7 +25,7 @@ const Metadata = {
 		{
 			title: 'Everyday Flooring',
 			demoSrc: 'http://everdayflooring.com.au',
-			imgSrc: ed,
+			imgSrc: flooringImage,
 			description: `
 				Tiling and flooring website created for a local family owned business
 				in Brisbane Australia. Cooperated with the clients every step of

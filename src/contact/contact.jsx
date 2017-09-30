@@ -21,7 +21,7 @@ class Contact extends Component {
 		</div>
 	}
 	renderSenderField() {
-		return <input 
+		return <input
 			type="text"
 			className='senderField'
 			placeholder={Metadata.senderField}
@@ -36,8 +36,8 @@ class Contact extends Component {
 			onChange={(e) => this.handleChange(e, 'message')}/>;
 	}
 	renderSubmitButton() {
-		return <button 
-			className={`submit ${this.isDisabled() ? 'disabled' : 'enabled'}`} 
+		return <button
+			className={`submit ${this.isDisabled() ? 'disabled' : 'enabled'}`}
 			onClick={this.handleSubmit}>
 				{Metadata.submit}
 			</button>
@@ -51,17 +51,17 @@ class Contact extends Component {
 		});
 	}
 	handleSubmit() {
-		SayHi(this.state.sender, this.state.message);
-			// .then((res) => {
-			// 	console.log('tell user message was sent');
-			// 	this.setState = {
-			// 		sender: '',
-			// 		message: ''
-			// 	}
-			// })
-			// .error((err) => {
-			// 	console.log('tell user message could not be sent')
-			// })
+		SayHi(this.state.sender, this.state.message)
+			 .then((res) => {
+			 	console.log('tell user message was sent');
+			 	this.setState = {
+			 		sender: '',
+			 		message: ''
+			 	}
+			 })
+			 .error((err) => {
+			 	console.log('tell user message could not be sent')
+			 })
 	}
 	render() {
 		return <div className='contact section'>
@@ -73,4 +73,3 @@ class Contact extends Component {
 }
 
 export default Contact;
-

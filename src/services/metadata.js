@@ -1,4 +1,4 @@
-import phoneImage from './images/mobile.png'
+import phoneImage from './images/mobile-updated.png'
 import customImage from './images/custom.png'
 import websiteImage from './images/website.png'
 const Metadata = {

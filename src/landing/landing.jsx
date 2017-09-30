@@ -9,7 +9,7 @@ class Landing extends Component {
 	renderButton() {
 		const links = NavMetadata.links;
 		const contactLink = links[links.length - 1].to;
-		return <Link 
+		return <Link
 			className='button'
 			to={contactLink}
 			spy={true}
@@ -22,7 +22,8 @@ class Landing extends Component {
 			width: '70%'
 		};
 		return <div className='landing section'>
-			<img className='image' style={style} src={Metadata.imgSrc} alt=""/>
+			<img className='frameImg' style={style} src={Metadata.frameImgSrc} alt=""/>
+			<img className='screenImg' style={style} src={Metadata.screenImgSrc} alt=""/>
 			<div className='about'>
 				<h2 className='title'>{Metadata.title}</h2>
 				<div className='tagline'>{Metadata.tagline}</div>

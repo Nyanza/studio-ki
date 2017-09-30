@@ -1,4 +1,6 @@
-import img from './images/mbp.png'
+import screenImg from './images/website-launcher.jpg'
+import frameImg from './images/mbp.png'
+
 const Metadata = {
 	title: 'studio ki',
 	tagline: `
@@ -6,7 +8,8 @@ const Metadata = {
 		pixel perfect sites for businesses worldwide.
 	`,
 	btntxt: 'get a quote',
-	imgSrc: img
+	frameImgSrc: frameImg,
+	screenImgSrc: screenImg
 };
 
 export default Metadata;

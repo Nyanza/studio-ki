@@ -15,7 +15,7 @@ module.exports = {
 	},
 	module: {
 		rules: [{
-			test: /\.(js|jsx)$/, 
+			test: /\.(js|jsx)$/,
 			exclude: /node_modules/,
 			use: [
 			'jshint-loader',
@@ -35,11 +35,11 @@ module.exports = {
 			use: ['style-loader', 'css-loader', 'sass-loader']
 		},
 		{
-			test: /\.(png|jpeg|gif|ttf)$/,
+			test: /\.(png|jpeg|gif|ttf|jpg|php)$/,
 			use: [
-				{ loader: 'url-loader', options: {} } 
+				{ loader: 'url-loader', options: {} }
 			]
 		}
-		]
+	]
 	}
 };
