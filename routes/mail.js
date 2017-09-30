@@ -3,7 +3,16 @@ const path = require('path');
 const nodemailer = require('nodemailer');
 const ROOT_PATH = __dirname + '/../'
 
-const transporter = initializeTransport();
+
+const local = initializeLocal();
+
+const transporter = nodemailer.createTransport({
+    service: 'Gmail',
+    auth: {
+        user: local.email,
+        pass: local.email_pass
+    }
+});
 
 router.post('/', (req, res) => {
   var mailOptions = {
@@ -27,22 +36,13 @@ router.post('/', (req, res) => {
 
 module.exports = router;
 
-function initializeTransport() {
-  var local;
+function initializeLocal() {
   if (process.env.WEBSITE_EMAIL) {
-    local  = {
+    return {
       email: process.env.WEBSITE_EMAIL,
       email_pass: process.env.WEBSITE_PASS
     }
   } else {
-    local = require(path.resolve(ROOT_PATH, 'local.json'));
+    return require(path.resolve(ROOT_PATH, 'local.json'));
   }
-  const transporter = nodemailer.createTransport({
-      service: 'Gmail',
-      auth: {
-          user: local.email,
-          pass: local.email_pass
-      }
-  });
-  return transporter;
 }
