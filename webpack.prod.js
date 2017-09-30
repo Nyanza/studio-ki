@@ -15,7 +15,7 @@ module.exports = {
 	},
 	plugins: [
 		new webpack.DefinePlugin({
-			API_HOST: JSON.stringify('http://studio-ki.co/')
+			API_HOST: JSON.stringify('http://studio-ki.co')
 		})
 	],
 	module: {
