@@ -18,6 +18,7 @@ class Services extends Component {
 			key={index} 
 			index={index}
 			img={service.img}
+			shadow={service.imgShadow}
 			title={service.title}
 			description={service.description} />
 	}

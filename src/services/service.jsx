@@ -8,6 +8,12 @@ class Services extends Component {
 		super();
 		this.handleClick = this.handleClick.bind(this);
 	}
+	boxShadow() {
+		const shadow = '0.1em 0.2em 0.5em 0 rgba(34, 34, 34, 0.4)';
+		return {
+			boxShadow: this.props.shadow ? shadow : ''
+		}	
+	}
 	renderTemplate() {
 		if(this.props.index % 2 == 0) return this.renderEvenTemplate();
 		return this.renderOddTemplate();
@@ -35,7 +41,7 @@ class Services extends Component {
 	}
 	renderImageCell() {
 		return <div className='image'>
-				<img src={this.props.img} alt={this.props.title}/>
+				<img src={this.props.img} alt={this.props.title} style={this.boxShadow()}/>
 			</div>;
 	}
 	renderAboutCell() {

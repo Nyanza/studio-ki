@@ -36,7 +36,7 @@
 				align-items: center;
 				img {
 					height: 100%;
-					box-shadow: 0.1em 0.2em 0.5em 0 $shadowDark;
+					// box-shadow: 0.1em 0.2em 0.5em 0 $shadowDark;
 				}
 				@include mobile { display: none; }
 			}
@@ -45,8 +45,10 @@
 				grid-template-rows: 2fr 2fr 1fr;
 				@include mobile { align-items: center; }
 				&>* {
-					justify-self: center;
-					text-align: center;
+					@include mobile {
+						justify-self: center;
+						text-align: center;
+					}	
 				}
 				.title, .button {
 					text-transform: uppercase;
@@ -81,7 +83,7 @@
 						width: 50vw;
 						height: 20vw;
 						text-align: center;
-						margin-top: 3vw;
+						margin-top: 5vw;
 					}
 
 					&:hover {

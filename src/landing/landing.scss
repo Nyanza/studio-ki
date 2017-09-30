@@ -49,8 +49,11 @@
 		}
 		.tagline {
 			color: $gray;
+			line-height: 2;
+			width: 25vw;
 			@include mobile {
 				line-height: 2;
+				width: 100%;
 			}
 		}
 		.button {
@@ -68,7 +71,7 @@
 
 			@include mobile {
 				height: 20vw;
-				width: 40vw;
+				width: 50vw;
 			}
 
 			&:hover {

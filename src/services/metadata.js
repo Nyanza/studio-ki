@@ -6,6 +6,7 @@ const Metadata = {
 	services: [
 		{
 			img: websiteImage,
+			imgShadow: true,
 			title: 'Website Design & Development',
 			description: `
 				Attractive & affordable custom-made
@@ -14,6 +15,7 @@ const Metadata = {
 		},
 		{
 			img: phoneImage,
+			imgShadow: false,
 			title: 'App & Mobile Applications',
 			description: `
 				Get a professionally designed app with
@@ -23,6 +25,7 @@ const Metadata = {
 		},
 		{
 			img: customImage,
+			imgShadow: true,
 			title: 'Custom Projects / SaaS',
 			description: `
 				Need a complex web-based tool built?
