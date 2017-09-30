@@ -9,7 +9,8 @@ class Contact extends Component {
 		super();
 		this.state = {
 			sender: '',
-			message: ''
+			message: '',
+			sendState: 'send'
 		};
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
@@ -39,7 +40,7 @@ class Contact extends Component {
 		return <button
 			className={`submit ${this.isDisabled() ? 'disabled' : 'enabled'}`}
 			onClick={this.handleSubmit}>
-				{Metadata.submit}
+				{this.state.sendState}
 			</button>
 	}
 	isDisabled() {
@@ -51,16 +52,17 @@ class Contact extends Component {
 		});
 	}
 	handleSubmit() {
+		this.setState({ sendState: 'sending...'})
 		SayHi(this.state.sender, this.state.message)
 			 .then((res) => {
-			 	console.log('tell user message was sent');
-			 	this.setState = {
+			 	this.setState({
 			 		sender: '',
-			 		message: ''
-			 	}
+			 		message: '',
+			 		sendState: 'sent!'
+			 	})
 			 })
 			 .error((err) => {
-			 	console.log('tell user message could not be sent')
+			 	this.setState({ sendState: 'try again :S'})
 			 })
 	}
 	render() {
