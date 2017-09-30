@@ -22,8 +22,7 @@ class Landing extends Component {
 			width: '70%'
 		};
 		return <div className='landing section'>
-			<img className='frameImg' style={style} src={Metadata.frameImgSrc} alt=""/>
-			<img className='screenImg' style={style} src={Metadata.screenImgSrc} alt=""/>
+			<img className='image' style={style} src={Metadata.imgSrc} alt=""/>
 			<div className='about'>
 				<h2 className='title'>{Metadata.title}</h2>
 				<div className='tagline'>{Metadata.tagline}</div>
