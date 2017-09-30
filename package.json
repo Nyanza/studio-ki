@@ -4,7 +4,7 @@
   "description": "studio-ki website",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon index.js",
+    "server": "node index.js",
     "dev": "webpack-dev-server --inline",
     "start": "npm run dev | npm run server",
     "build": "webpack -p --config=webpack.prod.js"
