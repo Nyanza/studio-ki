@@ -43,14 +43,20 @@
 			.about {
 				display: grid;
 				grid-template-rows: 2fr 2fr 1fr;
+				@include mobile { align-items: center; }
+				&>* {
+					justify-self: center;
+					text-align: center;
+				}
 				.title, .button {
 					text-transform: uppercase;
 					letter-spacing: $letterSpaceDesktop;
 					font-weight: bold;
-
 				}
 				.title {
+					letter-spacing: $letterSpaceDesktop * 1.1;
 					align-self: end;
+					@include mobile { align-self: center; }
 				}
 				.description {
 					align-self: center;

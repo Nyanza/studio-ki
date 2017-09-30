@@ -7,15 +7,24 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
 	@include mobile {
 		flex-direction: column;
-		font-size: 0.5em;
+	}
+	.about, .image {
+		margin: 0 1vw;
+	}
+	.image {
+		width: 60vw;
+		height: auto;
+		@include mobile { width: 80vw; }
 	}
 	.about{
 		position: relative;
 		display: grid;
 		grid-auto-flow: row;
-		grid-template-rows: 1fr 1.5fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr;
+		grid-gap: 3vw;
 
 		.title, .tagline, .button {
 			@include mobile {
@@ -25,31 +34,31 @@
 		}
 
 		.title, .tagline {
-			margin: 0.1em 0;
+			margin: 0.1vw 0;
 		}
 		.title, .button {
 			text-transform: uppercase;
 			letter-spacing: $letterSpaceDesktop;
 		}
 		.title {
+			align-self: center;
 			z-index: 1;
-			font-size: 4em;
+			font-size: 4vw;
 			transition: 0.4s all;
+			@include mobile { font-size: 8vw; }
 		}
 		.tagline {
-			font-size: 1.5em;
 			color: $gray;
 			@include mobile {
 				line-height: 2;
-				font-size: 1.8em;
 			}
 		}
 		.button {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			height: 6vw;
-			width: 18vw;
+			height: 5.5vw;
+			width: 16vw;
 
 			background-color: $black;
 			color: $white;
@@ -60,7 +69,6 @@
 			@include mobile {
 				height: 20vw;
 				width: 40vw;
-				font-size: 1.5em;
 			}
 
 			&:hover {

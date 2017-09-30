@@ -18,11 +18,8 @@ class Landing extends Component {
 			duration={500} >{Metadata.btntxt}</Link>
 	}
 	render() {
-		var style = {
-			width: '70%'
-		};
 		return <div className='landing section'>
-			<img className='image' style={style} src={Metadata.imgSrc} alt=""/>
+			<img className='image' src={Metadata.imgSrc} alt=""/>
 			<div className='about'>
 				<h2 className='title'>{Metadata.title}</h2>
 				<div className='tagline'>{Metadata.tagline}</div>

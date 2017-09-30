@@ -16,9 +16,12 @@ html, body, #root, .main {
 }
 body {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 1.1em;
+	font-size: 1.5vw;
 	background-color: $white;
 	color: $black;
+	@include mobile {
+		font-size: 4vw;
+	}
 
 	h1 {
 		font-weight: normal;
